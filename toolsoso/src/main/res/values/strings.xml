@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Toolsoso</string>
+
+    <string name="load_error">抱歉，加载失败...点击重试</string>
+    <string name="load_ing">正在加载...</string>
+    <string name="load_null">加载完成，没有更多数据...</string>
+</resources>

@@ -1,0 +1,87 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        
+        //arouter 路由
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+
+    //    //解决方法数限制
+    api 'com.android.support:multidex:1.0.3'
+    // base tool
+    api 'com.orhanobut:logger:2.1.1'
+    api 'com.blankj:utilcode:1.9.8'
+    //谷歌浏览器调试
+    debugImplementation 'com.facebook.stetho:stetho:1.5.0'
+    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    api 'com.facebook.stetho:stetho-js-rhino:1.5.0'
+    //权限
+    api 'com.github.hotchemi:permissionsdispatcher:3.3.1'
+    //通用adapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+    //路由框架
+    api 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor "com.alibaba:arouter-compiler:1.1.4"
+    //组件生命周期
+    api 'android.arch.lifecycle:runtime:1.+'
+    //状态栏
+    api 'com.jaeger.statusbaruitl:library:1.0.0'
+    //异步加载图片回调
+    api 'org.xutils:xutils:3.5.0'
+    //FlycoTabLayout viewpage指示器
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //加载动画
+    api 'com.zyao89:zloading:1.0.11'
+    //view的未读消息红点 badge
+    api 'q.rorbin:badgeview:1.1.3'
+    //桌面未读消息Badger
+    api "me.leolin:ShortcutBadger:1.1.22@aar"
+    //LeakCanary检测内存泄漏
+    api 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    //releaseImplementation  'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    api  'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3' // Optional, if you use support library fragments:
+
+    //事件总线
+    api files('libs/androideventbus-1.0.5.jar')
+    //picker 日期/选择滚轮
+    api files('libs/AndroidPicker-1.5.5.jar')
+    //bugly 异常上报
+    api files('libs/bugly_crash_release.jar')
+    //腾讯x5
+}

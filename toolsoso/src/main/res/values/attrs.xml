@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="bootombar">
+        <!--文字默认颜色-->
+        <attr name="text_defcolor"  format="color"/>
+        <!--文字选中颜色-->
+        <attr name="text_precolor" format="color" />
+        <!--文字大小-->
+        <attr name="text_size" format="integer" />
+        <!--顶部分割线颜色-->
+        <attr name="divider_color" format="color"/>
+        <!--顶部分割线高度-->
+        <attr name="divider_height" format="dimension"/>
+        <!--是否显示顶部分割线-->
+        <attr name="show_divider" format="boolean"/>
+        <!--导航栏背景-->
+        <attr name="bar_bg" format="color"/>
+        <!--导航栏内容padding_top-->
+        <attr name="bar_padding_top" format="dimension"/>
+        <!--导航栏内容padding_bottom-->
+        <attr name="bar_padding_bottom" format="dimension"/>
+        <!--文字与icon的距离-->
+        <attr name="text_margin_icon" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="cd_textview">
+        <attr name="text_color_default" format="color"/>
+        <attr name="text_color_cd" format="color"/>
+        <attr name="cd_text" format="string"/>
+        <attr name="default_text" format="string"/>
+        <attr name="total_time" format="integer"/>
+        <attr name="cd_time" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="loadlayout_tv">
+        <attr name="tip_size" format="dimension"/>
+        <attr name="tip_color" format="color"/>
+        <attr name="ing_text" format="string"/>
+        <attr name="error_text" format="string"/>
+        <attr name="null_text" format="string"/>
+    </declare-styleable>
+</resources>
