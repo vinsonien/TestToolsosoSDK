@@ -1,5 +1,6 @@
 package com.vs.toolsoso.eventbus;
 
+
 import org.simple.eventbus.EventBus;
 
 /**

@@ -12,6 +12,11 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
+        //bintray
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.21"
+        classpath "guru.stefma.bintrayrelease:bintrayrelease:1.1.2"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.17"
+
     }
 }
 
@@ -22,6 +27,16 @@ allprojects {
         //添加以下
         maven { url "https://jitpack.io" }
     }
+
+    //bintray 上传使用时 如果要开源的library包含中文的话(包括注释) 需要添加这个
+    tasks.withType(Javadoc) {
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+
 }
 
 task clean(type: Delete) {
