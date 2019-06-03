@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_margin="@dimen/dp_10"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【1】creat 用法"
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【3】from 用法"
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【5】buffer 用法\n将原发射出来的数据已count为单元打包之后在分别发射出来"
+                    android:id="@+id/btn5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【7】map 用法\n将被观察者原发射出来的数据类型转换为其他数据类型供给观察者"
+                    android:id="@+id/btn7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【9】flatmap 用法\n 实现多个网络请求依次依赖\n将一个发送数据的被观察者Observable变换为多个发送数据的被观察者Observable，然后将他们合并为一个Observable，用这个合并后的被观察者Observable发送数据给观察者Observer"
+                    android:id="@+id/btn9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【11】interval 用法\n心跳间隔任务实现即时通讯轮询"
+                    android:id="@+id/btn11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【13】repeat 用法\n重复N次操作"
+                    android:id="@+id/btn13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【15】filter 用法\n添加判断过滤数据"
+                    android:id="@+id/btn15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【17】doOnNext 用法\n允许我们在每次输出一个元素之前做一些额外的事情"
+                    android:id="@+id/btn17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【19】distinct 用法\n去重"
+                    android:id="@+id/btn19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【21】all 用法\n去重"
+                    android:id="@+id/btn21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【23】skipUntil 用法\n直到设定的条件事件发出之后，开始发送原始事件"
+                    android:id="@+id/btn23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【25】contains 用法\n是否包含"
+                    android:id="@+id/btn25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【2】just 用法"
+                    android:id="@+id/btn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【4】defer 用法"
+                    android:id="@+id/btn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【6】concat 用法\nconcat 的必须调用 onComplete 后才能订阅下一个 Observable 的特性，我们就可以先读取缓存数据，倘若获取到的缓存数据不是我们想要的，再调用 onComplete() 以执行获取网络数据的 Observable\n如果缓存数据能应我们所需，则直接调用 onNext()，防止过度的网络请求，浪费用户的流量"
+                    android:id="@+id/btn6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【8】concatmap 用法\n跟flatmap用法一样，但concat是有序发射，flatmap是无序发射"
+                    android:id="@+id/btn8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【10】zip 用法\n实现多个接口数据共同更新 UI"
+                    android:id="@+id/btn10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【12】fromIterable 用法\n遍历集合，发送每个item"
+                    android:id="@+id/btn12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【14】timer 用法\n给定时间后发射"
+                    android:id="@+id/btn14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【16】take 用法\n发射指定数量的结果"
+                    android:id="@+id/btn16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【18】retry 用法\n出现错误时，让被观察者重新发送数据。若错误一直发生，则一直重新发送"
+                    android:id="@+id/btn18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【20】debounce 用法\n一定的时间内没有操作就会发送事件（只会发送最后一次操作的事件）"
+                    android:id="@+id/btn20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【22】takeUntil 用法\n当事件满足设定的条件时，该事件的下一个事件不会被发送了"
+                    android:id="@+id/btn22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【24】takeWhile 用法\n当事件满足设定的条件时，发送事件"
+                    android:id="@+id/btn24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="【26】defaultIfEmpty 用法\n如果没有正常结束事件（onComlete执行），返回默认值"
+                    android:id="@+id/btn26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

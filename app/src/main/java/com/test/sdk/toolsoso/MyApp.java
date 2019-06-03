@@ -23,6 +23,8 @@ public class MyApp extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        InitBlankjUtils();
+        InitLoggUtil(true);
     }
 
     /**
@@ -63,7 +65,7 @@ public class MyApp extends MultiDexApplication {
                 .showThreadInfo(false)  //是否选择显示线程信息，默认为true
                 .methodCount(0)         //方法数显示多少行，默认2行
                 .methodOffset(7)        //隐藏方法内部调用到偏移量，默认5
-                .tag("填写自己的TAG标签")   //自定义TAG全部标签，默认PRETTY_LOGGER
+                .tag("TAG")   //自定义TAG全部标签，默认PRETTY_LOGGER
                 .build();
         LogUtil.Init(formatStrategy, isDebug);
     }
