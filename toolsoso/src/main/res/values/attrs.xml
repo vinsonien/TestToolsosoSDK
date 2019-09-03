@@ -40,4 +40,21 @@
         <attr name="error_text" format="string"/>
         <attr name="null_text" format="string"/>
     </declare-styleable>
+
+
+    <declare-styleable name="toolMenuLayout">
+        <attr name="type">
+            <!--平分-->
+            <enum name="equal" value="0" />
+            <!--对齐-->
+            <enum name="align" value="1" />
+        </attr>
+        <attr name="textSize" format="integer"/>
+        <attr name="distance" format="integer"/>
+        <attr name="textColor" format="color"/>
+        <attr name="paddingTop" format="integer"/>
+        <attr name="paddingLeft" format="integer"/>
+        <attr name="paddingRight" format="integer"/>
+        <attr name="paddingBottom" format="integer"/>
+    </declare-styleable>
 </resources>
