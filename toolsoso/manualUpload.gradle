@@ -1,0 +1,63 @@
+/**
+ * 本地生成构件文件
+ */
+// 定义pom文件参数
+def groupIdDefined = "com.lws"
+def artifactIdDefined = "toolsoso"
+def versionDefined = "1.6.0"
+
+// 重命名生成的arr文件
+android.libraryVariants.all { variant ->
+    variant.outputs.all { output ->
+        if (outputFile != null && outputFileName.endsWith('.aar')) {
+            outputFileName = "${artifactIdDefined}-${versionDefined}.aar"
+        }
+    }
+}
+
+// 生成Java源码文件
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    baseName = "${artifactIdDefined}-${versionDefined}"
+    classifier = 'sources'
+}
+
+// 生成Javadoc源码文件
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    baseName = "${artifactIdDefined}-${versionDefined}"
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+//artifacts {
+//    archives sourcesJar
+//    archives javadocJar
+//}
+
+// 生成pom文件
+apply plugin: 'maven'
+
+task createPom {
+    doLast {
+        pom {
+            project {
+                groupId "${groupIdDefined}"
+                artifactId "${artifactIdDefined}"
+                version "${versionDefined}"
+                packaging "aar"
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+            }
+        }.writeTo("$libsDir/${artifactIdDefined}-${versionDefined}.pom")
+    }
+}
