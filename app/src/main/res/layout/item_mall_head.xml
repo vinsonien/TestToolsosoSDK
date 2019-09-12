@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 文件：item_news_head.xml  模块：app  项目：Sunrise
+  ~ 当前修改时间：2019年08月30日 15:33:17
+  ~ 上次修改时间：2019年08月30日 15:33:17
+  ~ 作者：vinsonien
+  ~
+  ~ Copyright (c) 2019
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.vs.toolsoso.widget.view.MarqueeView.MarqueeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/marqueeView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        app:mvAnimDuration="500"
+        app:mvDirection="bottom_to_top"
+        app:mvInterval="3000" />
+
+</LinearLayout>

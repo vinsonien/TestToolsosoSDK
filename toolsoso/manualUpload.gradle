@@ -4,7 +4,7 @@
 // 定义pom文件参数
 def groupIdDefined = "com.lws"
 def artifactIdDefined = "toolsoso"
-def versionDefined = "1.6.0"
+def versionDefined = "2.1.0"
 
 // 重命名生成的arr文件
 android.libraryVariants.all { variant ->
@@ -39,6 +39,13 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 //    archives sourcesJar
 //    archives javadocJar
 //}
+
+//解决 JavaDoc 中文注释生成失败的问题
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
 
 // 生成pom文件
 apply plugin: 'maven'

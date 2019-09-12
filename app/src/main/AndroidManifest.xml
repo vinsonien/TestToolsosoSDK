@@ -11,6 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".RxJavaActivity">
+        </activity>
+
+        <activity android:name=".marqueeview.ui.MarqueeViewActivity">
+
+        </activity>
+
+        <activity android:name=".marqueeview.ui.MarqueeAdapterAcitivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +29,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RxJavaActivity">
-
-        </activity>
     </application>
 
 </manifest>

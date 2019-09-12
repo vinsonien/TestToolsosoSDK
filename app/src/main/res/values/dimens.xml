@@ -1,0 +1,31 @@
+<resources>
+
+ <dimen name="layout_text_size_19">19dp</dimen>
+ <dimen name="layout_text_size_18">18dp</dimen>
+ <dimen name="layout_text_size_17">17dp</dimen>
+ <dimen name="layout_text_size_16">16dp</dimen>
+ <dimen name="layout_text_size_15">15dp</dimen>
+ <dimen name="layout_text_size_14">14dp</dimen>
+ <dimen name="layout_text_size_13">13dp</dimen>
+ <dimen name="layout_text_size_12">12dp</dimen>
+ <dimen name="layout_text_size_11">11dp</dimen>
+ <dimen name="layout_text_size_10">10dp</dimen>
+ <dimen name="layout_text_size_9">9dp</dimen>
+ <dimen name="layout_text_size_8">8dp</dimen>
+
+ <dimen name="layout_margin_10">10dp</dimen>
+ <dimen name="layout_margin_15">15dp</dimen>
+ <dimen name="layout_margin_16">16dp</dimen>
+ <dimen name="layout_margin_20">20dp</dimen>
+ <dimen name="layout_margin_30">30dp</dimen>
+ <dimen name="layout_margin_40">40dp</dimen>
+ <dimen name="layout_padding_3">3dp</dimen>
+ <dimen name="layout_padding_5">5dp</dimen>
+ <dimen name="layout_padding_8">8dp</dimen>
+
+
+ <dimen name="layout_news_pic_wh">100dp</dimen>
+
+ <dimen name="layout_merchandise_pic_wh">180dp</dimen>
+ <dimen name="personal_static_icon">20dp</dimen>
+</resources>

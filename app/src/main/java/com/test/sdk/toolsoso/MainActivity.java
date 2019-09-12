@@ -31,28 +31,36 @@ public class MainActivity extends AppCompatActivity {
 
         InitView();
 
+
     }
 
     private void InitView() {
-        String[] tabTextArray = new String[]{"111","222","333"
-                ,"444","555","666","777","888"};
-        int[] tabIconArray = new int[]{R.mipmap.news_off,R.mipmap.news_on,
-                R.mipmap.map_off,R.mipmap.map_on,
-                R.mipmap.person_off,R.mipmap.person_on,
-                R.mipmap.news_off,R.mipmap.news_on,};
 
-        toolmenu.setTabTextArray(tabTextArray);
-        toolmenu.setTabIconArray(tabIconArray);
-        toolmenu.setRowItemCount(5);
-        toolmenu.setType(ToolMenuLayout.ALIGN_TYPE);
-        toolmenu.setOnMenuLayoutClickListener(onToolMenuLayoutItemClickListener);
-        toolmenu.init();
+
+
     }
 
-    OnToolMenuLayoutItemClickListener onToolMenuLayoutItemClickListener = new OnToolMenuLayoutItemClickListener() {
-        @Override
-        public void onItemClick(int position) {
-            Log.e("toolsoso","pos==" + position);
-        }
-    };
+
+//    private void InitView() {
+//        String[] tabTextArray = new String[]{"111","222","333"
+//                ,"444","555","666","777","888"};
+//        int[] tabIconArray = new int[]{R.mipmap.news_off,R.mipmap.news_on,
+//                R.mipmap.map_off,R.mipmap.map_on,
+//                R.mipmap.person_off,R.mipmap.person_on,
+//                R.mipmap.news_off,R.mipmap.news_on,};
+//
+//        toolmenu.setTabTextArray(tabTextArray);
+//        toolmenu.setTabIconArray(tabIconArray);
+//        toolmenu.setRowItemCount(5);
+//        toolmenu.setType(ToolMenuLayout.ALIGN_TYPE);
+//        toolmenu.setOnMenuLayoutClickListener(onToolMenuLayoutItemClickListener);
+//        toolmenu.init();
+//    }
+//
+//    OnToolMenuLayoutItemClickListener onToolMenuLayoutItemClickListener = new OnToolMenuLayoutItemClickListener() {
+//        @Override
+//        public void onItemClick(int position) {
+//            Log.e("toolsoso","pos==" + position);
+//        }
+//    };
 }

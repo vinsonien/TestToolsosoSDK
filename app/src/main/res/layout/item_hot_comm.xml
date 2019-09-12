@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 文件：item_hot_comm.xml  模块：app  项目：Sunrise
+  ~ 当前修改时间：2019年09月11日 10:26:04
+  ~ 上次修改时间：2019年09月11日 10:26:03
+  ~ 作者：vinsonien
+  ~
+  ~ Copyright (c) 2019
+  ~
+  -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hotComm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</TextView>

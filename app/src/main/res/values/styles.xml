@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+    <!--列表加载布局背景-->
+    <style name="error_load_bg">
+        <item name="tip_size">@dimen/layout_text_size_15</item>
+        <item name="tip_color">#123ac3</item>
+        <item name="ing_text">@string/load_ing</item>
+        <item name="error_text">@string/load_error</item>
+        <item name="null_text">@string/load_null</item>
+    </style>
+
+
 </resources>
