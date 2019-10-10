@@ -28,4 +28,5 @@
 
  <dimen name="layout_merchandise_pic_wh">180dp</dimen>
  <dimen name="personal_static_icon">20dp</dimen>
+
 </resources>

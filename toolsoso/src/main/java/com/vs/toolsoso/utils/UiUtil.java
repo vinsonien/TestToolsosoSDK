@@ -170,6 +170,23 @@ public class UiUtil {
     }
 
 
+    public static void TextDrawableTop(TextView v, Drawable drawable,
+                                       int padding, Context c) {
+        drawable.setBounds(0, 0, drawable.getMinimumWidth(),
+                drawable.getMinimumHeight());
+        v.setCompoundDrawables(null, drawable, null, null);
+        v.setCompoundDrawablePadding(dip2px(c, padding));
+    }
+
+    public static void TextDrawableBottom(TextView v, Drawable drawable,
+                                       int padding, Context c) {
+        drawable.setBounds(0, 0, drawable.getMinimumWidth(),
+                drawable.getMinimumHeight());
+        v.setCompoundDrawables(null, null, null, drawable);
+        v.setCompoundDrawablePadding(dip2px(c, padding));
+    }
+
+
     /**
      * EditText获取焦点并显示软键盘
      */
