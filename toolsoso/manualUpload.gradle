@@ -4,7 +4,7 @@
 // 定义pom文件参数
 def groupIdDefined = "com.lws"
 def artifactIdDefined = "toolsoso"
-def versionDefined = "2.4.0"
+def versionDefined = "2.5.0"
 
 // 重命名生成的arr文件
 android.libraryVariants.all { variant ->

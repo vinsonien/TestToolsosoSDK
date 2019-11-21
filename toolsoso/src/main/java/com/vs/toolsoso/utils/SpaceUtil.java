@@ -2,6 +2,7 @@ package com.vs.toolsoso.utils;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -36,12 +37,23 @@ public class SpaceUtil {
         view.setLayoutParams(lp);
     }
 
+    public static void SetMarginsFrameLayout(View view,int left,int top,int right,int bottom){
+        // 1、设置固定大小
+        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) view.getLayoutParams();
+        //设置margin值
+        lp.setMargins(isDefaultLeftMargins(lp,left),isDefaultTopMargins(lp,top),
+                isDefaultRightMargins(lp,right), isDefaultBottomMargins(lp,bottom));
+        view.setLayoutParams(lp);
+    }
+
     public static ViewGroup.MarginLayoutParams GetResourcesBuilder(Object defaultObject) {
 
         if (defaultObject instanceof LinearLayout.LayoutParams) {
             return (LinearLayout.LayoutParams) defaultObject;
         } else if (defaultObject instanceof RelativeLayout.LayoutParams) {
             return (RelativeLayout.LayoutParams) defaultObject;
+        } else if (defaultObject instanceof FrameLayout.LayoutParams) {
+            return (FrameLayout.LayoutParams) defaultObject;
         }
         return null;
     }
