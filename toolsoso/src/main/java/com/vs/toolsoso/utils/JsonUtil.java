@@ -14,7 +14,6 @@ import com.alibaba.fastjson.serializer.JSONLibDataFormatSerializer;
 import com.alibaba.fastjson.serializer.SerializeConfig;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
-import org.xutils.common.util.KeyValue;
 
 import java.util.List;
 import java.util.Map;
@@ -75,11 +74,11 @@ public class JsonUtil {
      * @param keyvalue
      * @return
      */
-    public static Object keyvalueToJson(KeyValue keyvalue) {
-        String textJson = JSON.toJSONString(keyvalue);
-        Object objectJson  = JSON.parse(textJson);
-        return objectJson;
-    }
+//    public static Object keyvalueToJson(KeyValue keyvalue) {
+//        String textJson = JSON.toJSONString(keyvalue);
+//        Object objectJson  = JSON.parse(textJson);
+//        return objectJson;
+//    }
 
     /**
      * 将string转化为序列化的json字符串

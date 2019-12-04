@@ -3,8 +3,8 @@ package com.vs.toolsoso.widget;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.util.Log;
 
-import com.vs.toolsoso.utils.LogUtil;
 import com.vs.toolsoso.widget.callback.DialogClickListener;
 import com.vs.toolsoso.widget.utils.Dialogs;
 
@@ -56,7 +56,7 @@ public class BaseDialog {
             if (listener != null){
                 listener.onCommit();
             }else{
-                LogUtil.e("DialogClickListener is null");
+                Log.e("BaseDialog","DialogClickListener is null");
             }
         }
     };
@@ -67,7 +67,7 @@ public class BaseDialog {
             if (listener != null){
                 listener.onCancel();
             }else{
-                LogUtil.e("DialogClickListener is null");
+                Log.e("BaseDialog","DialogClickListener is null");
             }
         }
     };
@@ -76,7 +76,7 @@ public class BaseDialog {
         if (alertDialog != null){
             alertDialog.create();
         }else{
-            LogUtil.e("create fail because of AlertDialog.Builder is null");
+            Log.e("BaseDialog","create fail because of AlertDialog.Builder is null");
         }
     }
 
@@ -84,7 +84,7 @@ public class BaseDialog {
         if (alertDialog != null){
             alertDialog.show();
         }else{
-            LogUtil.e("show fail because of AlertDialog.Builder is null");
+            Log.e("BaseDialog","show fail because of AlertDialog.Builder is null");
         }
     }
 }
